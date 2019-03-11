@@ -1,0 +1,19 @@
+{:paths ["resources" "src"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.0"}
+        cljfx {:mvn/version "1.1.0"}
+        re-find {:git/url "https://github.com/borkdude/re-find"
+                 :sha "c27af619a9d9e12832b7446e127d68ab916ce78c"}
+        org.clojure/test.check {:mvn/version "0.9.0"}
+        speculative {:git/url "https://github.com/borkdude/speculative"
+                     :sha "5e6acb13c0e843dba3b7cd0a310597ac68f41247"}}
+ :aliases
+ {:local-deps {:extra-deps {speculative {:local/root "../speculative"}
+                            re-find {:local/root "../re-find"}}}
+  :test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "RELEASE"}}}
+  :runner
+  {:extra-deps {com.cognitect/test-runner
+                {:git/url "https://github.com/cognitect-labs/test-runner"
+                 :sha "76568540e7f40268ad2b646110f237a60295fa3c"}}
+   :main-opts ["-m" "cognitect.test-runner"
+               "-d" "test"]}}}
