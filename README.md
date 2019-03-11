@@ -1,42 +1,67 @@
 # re-find.fx
 
-FIXME: description
+A JavaFX11 wrapper for re-find.
+
+## Try it out
+
+```sh
+clj -Sdeps "{:deps
+                   {MageMasher/re-find.fx
+                      {:git/url \"https://github.com/MageMasher/re-find.fx\"
+                       :sha \"aa50ea7cb448321332de31040c8c0681a0352196\"}}}" \
+    -m re-find.fx
+
+```
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Add the alias below to your project `deps.edn` or global at `~/.clojure/deps.edn`
+
+```clojure
+:re-find.fx
+{:extra-deps {MageMasher/re-find.fx
+              {:git/url "https://github.com/MageMasher/re-find.fx"
+               :sha "aa50ea7cb448321332de31040c8c0681a0352196"}}}
+
+```
 
 ## Usage
 
-FIXME: explanation
-
 Run the project directly:
 
-    $ clj -m re-find.fx
+    $ clj -A:re-find.fx -m re-find.fx
+
+Add re-find.fx to an existing project by enabling the `re-find.fx` alias.
+
+    $ clj -A:re-find.fx
 
 Run the project's tests (they'll fail until you edit them):
 
     $ clj -A:test:runner
 
-## Options
-
-FIXME: listing of options this app accepts.
-
 ## Examples
-
-...
-
+Same examples as on [re-find.it](https://re-find.it/)
 ### Bugs
 
-...
+Right now if you provide multiple arguments, only the first argument shows up in
+the arguments column of the result table. Problem is identified, need to think 
+through the solution.
 
-### Any Other Sections
-### That You Think
-### Might be Useful
+Example:
+####Args
+```
+1 2 3
+```
+####Ret
+```
+ret: 1
+```
+####Results
+```
+|function         | arguments | return value |
+|-----------------+-----------+--------------|
+|clojure.core/min | 1         | 1            |
+```
 
-## License
-
-Copyright © 2019 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+### Acknowledgements
+Thanks [Michiel Borkent](https://github.com/borkdude/) for creating [re-find](https://github.com/borkdude/re-find) and [re-find.web](https://github.com/borkdude/re-find.web) which is hosted at [re-find.it](https://re-find.it/)
