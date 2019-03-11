@@ -60,7 +60,8 @@
                             (read-args args))
                           (when-not (str/blank? ret)
                             (read-ret ret))])]
-      (if (and (not= ::invalid args*)
+      (if (and (not (str/blank? args))
+               (not= ::invalid args*)
                (not= ::invalid ret*))
         (let [printable-args (if from-example?
                                (read-string (:args
@@ -97,7 +98,6 @@
                                  (assoc :exact-ret-match? exact-ret-match?))
               results (try (mapply re-find/match match-args)
                            (catch Exception e
-                             (println e)
                              nil))
               results (map (fn [m]
                              (cond-> m
