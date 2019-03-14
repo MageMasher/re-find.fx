@@ -8,7 +8,7 @@ A JavaFX11 wrapper for re-find.
 clj -Sdeps "{:deps
                    {MageMasher/re-find.fx
                       {:git/url \"https://github.com/MageMasher/re-find.fx\"
-                       :sha \"aa50ea7cb448321332de31040c8c0681a0352196\"}}}" \
+                       :sha \"5966f9f1aabe31ea74e2c896ff7d29f06c2a40bb\"}}}" \
     -m re-find.fx
 
 ```
@@ -21,7 +21,7 @@ Add the alias below to your project `deps.edn` or global at `~/.clojure/deps.edn
 :re-find.fx
 {:extra-deps {MageMasher/re-find.fx
               {:git/url "https://github.com/MageMasher/re-find.fx"
-               :sha "aa50ea7cb448321332de31040c8c0681a0352196"}}}
+               :sha "5966f9f1aabe31ea74e2c896ff7d29f06c2a40bb"}}}
 
 ```
 
@@ -48,15 +48,15 @@ the arguments column of the result table. Problem is identified, need to think
 through the solution.
 
 Example:
-####Args
+#### Args
 ```
 1 2 3
 ```
-####Ret
+#### Ret
 ```
-ret: 1
+1
 ```
-####Results
+#### Results
 ```
 |function         | arguments | return value |
 |-----------------+-----------+--------------|
