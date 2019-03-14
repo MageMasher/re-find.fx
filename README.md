@@ -8,7 +8,7 @@ A JavaFX11 wrapper for re-find.
 clj -Sdeps "{:deps
                    {MageMasher/re-find.fx
                       {:git/url \"https://github.com/MageMasher/re-find.fx\"
-                       :sha \"5966f9f1aabe31ea74e2c896ff7d29f06c2a40bb\"}}}" \
+                       :sha \"b29bde3519f7632b63eb71415943bf8a7cfa1462\"}}}" \
     -m re-find.fx
 
 ```
@@ -21,7 +21,7 @@ Add the alias below to your project `deps.edn` or global at `~/.clojure/deps.edn
 :re-find.fx
 {:extra-deps {MageMasher/re-find.fx
               {:git/url "https://github.com/MageMasher/re-find.fx"
-               :sha "5966f9f1aabe31ea74e2c896ff7d29f06c2a40bb"}}}
+               :sha "b29bde3519f7632b63eb71415943bf8a7cfa1462"}}}
 
 ```
 
