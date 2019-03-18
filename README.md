@@ -1,6 +1,9 @@
 # re-find.fx
 
 A JavaFX11 wrapper for re-find.
+## Requirements
+* JDK11
+* tools.deps
 
 ## Try it out
 
